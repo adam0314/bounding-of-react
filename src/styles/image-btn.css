@@ -1,0 +1,16 @@
+.player-choice-button {
+    height: 160px;
+    width: 160px;
+    background: none;
+    border: none;
+}
+
+.player-1-button {
+    background-image: url("../img/player1.png");
+    background-repeat: no-repeat;
+}
+
+.player-2-button {
+    background-image: url("../img/player2.png");
+    background-repeat: no-repeat;
+}
