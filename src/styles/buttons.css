@@ -14,3 +14,16 @@
     background-image: url("../img/player2.png");
     background-repeat: no-repeat;
 }
+
+.btn-default {
+    background: none;
+    background-image: url("../img/btn_default.png");
+    background-size: 100% 100%;
+    border: none;
+    text-align: center;
+    padding: 12px 15px 8px;
+}
+
+.btn-default:hover {
+    color:white;
+}

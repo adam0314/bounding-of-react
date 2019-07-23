@@ -22,13 +22,27 @@
 
 .flex-row .flex-column {
     flex-direction: column;
-    flex: 1;
 }
 
 .flex-row-spacing .flex-column {
     flex-direction: column;
     margin: 0 2%;
-    flex: 1;
+}
+
+.flex-row-spacing .flex-column-twos-center {
+    display: flex;
+    justify-content: center;
+    width: 48%;
+}
+
+.flex-row-spacing .flex-column-twos {
+    width: 48%;
+}
+
+.flex-row-spacing .flex-row-twos {
+    display: flex;
+    flex-direction: row;
+    width: 48%;
 }
 
 .flex-column-spacing {
@@ -36,6 +50,18 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 2% 0;
+}
+
+.flex-center-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-center-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .flex-grow {

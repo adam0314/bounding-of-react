@@ -1,21 +1,25 @@
 import React from "react";
+import PlayerDataTab from "./PlayerDataTab";
+import "../styles/PlayerScreen.css"
 
 const PlayerScreen = props => {
     const [hp, setHp] = React.useState(props.player.hp);
-    const [items, setItems] = React.useState(props.player.items);
-    const [dice, setDice] = React.useState(props.player.dice);
+    const [items, setItems] = React.useState([]);
+    const [dice, setDice] = React.useState([...props.player.dice]);
     const [enemyPower, setEnemyPower] = React.useState(props.player.enemyPower);
 
     return (
         <>
             {props.active ?
-            <section>
-                <div>
-                    Gracz {props.player.id} - {props.player.name}
-                </div>
-                <button onClick={props.onEndTurnClick}>Zakończ turę</button>
-            </section>
-            : null}
+                <PlayerDataTab
+                    playerObj={props.player}
+                    hp={hp}
+                    items={items}
+                    dice={dice}
+                    enemyPower={enemyPower}
+                    onEndTurnClick={props.onEndTurnClick}
+                />
+                : null}
         </>
     )
 }

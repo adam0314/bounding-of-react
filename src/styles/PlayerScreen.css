@@ -1,0 +1,17 @@
+.center-text {
+    text-align: center;
+}
+
+div[class*="-container"] {
+    background-image: url("../img/bg_grids.png");
+    background-size: 100% 100%;
+    padding: 2.5vh 10vw 2.5vh 10vw;
+}
+
+.dice-container {
+    height: 18vh;
+}
+
+.items-container {
+    height: 18vh;
+}

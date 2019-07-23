@@ -1,0 +1,34 @@
+div[class^="sprite"] {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.sprite-player1 {
+    background-image: url("../img/player1.png");
+    height: 150px;
+    width: 150px;
+}
+
+.sprite-player2 {
+    background-image: url("../img/player2.png");
+    height: 150px;
+    width: 150px;
+}
+
+.sprite-heart {
+    background-image: url("../img/heart.png");
+    height: 60px;
+    width: 60px;
+}
+
+.sprite-add {
+    background-image: url("../img/add.png");
+    height: 60px;
+    width: 60px;
+}
+
+.sprite-enemy-token-small {
+    background-image: url("../img/EnemyToken.png");
+    height: 65px;
+    width: 80px;
+}

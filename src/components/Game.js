@@ -1,5 +1,8 @@
 import React from 'react';
 import '../styles/App.css';
+import '../styles/buttons.css';
+import "../styles/flex.css";
+
 import StartScreen from './StartScreen';
 import PlayerScreen from './PlayerScreen';
 import {PlayerObj} from "../utils/classes";
@@ -11,7 +14,7 @@ const Game = () => {
 
     const startGame = playerId => {
         setCurrentPlayerId(playerId);
-        setCurrentTab(utils.tabs.playerData);
+        setCurrentTab(utils.tabs.playerScreen);
     }
 
     const changePlayer = () => {
@@ -26,7 +29,7 @@ const Game = () => {
         switch (currentTab) {
             case utils.tabs.startScreen:
                 return <StartScreen onPlayerClick={startGame}/>;
-            case utils.tabs.playerData:
+            case utils.tabs.playerScreen:
                 return (
                     <>
                         {utils.range(1, 2).map(id => (

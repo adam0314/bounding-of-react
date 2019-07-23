@@ -1,8 +1,4 @@
 import React from 'react';
-import "../styles/StartScreen.css"
-import "../styles/App.css"
-import "../styles/flex.css"
-import "../styles/image-btn.css"
 
 const StartScreen = props => (
     <section className="StartScreen flex-fill-center">
