@@ -1,4 +1,5 @@
-import utils from "./utils";
+import consts from "./consts";
+import _ from "lodash";
 
 export class PlayerObj {
     constructor(id = 0){
@@ -33,17 +34,17 @@ export class DieObj {
         switch (firstChar) {
             case "+":
                 this.signChar = "+";
-                this.sign = utils.sign.positive;
+                this.sign = consts.sign.positive;
                 this.value = Number(value.slice(1));
                 break;
             case "-":
                 this.signChar = "-";
-                this.sign = utils.sign.negative;
+                this.sign = consts.sign.negative;
                 this.value = Number(value.slice(1));
                 break;
             default:
                 this.signChar = "";
-                this.sign = utils.sign.neutral;
+                this.sign = consts.sign.neutral;
                 this.value = Number(value);
                 break;
         }
@@ -55,4 +56,29 @@ export class DieObj {
     toString = () => {
         return this.signChar + this.value;
     }	
+}
+
+export class ItemObj {
+    constructor(value) {
+        this.id = value.id;
+        this.name = value.name;
+        this.type = value.type;
+        if (this.type !== consts.itemTypes.dice) {
+            this.effect = value.effect;
+        } else {
+            this.effect = value.dice.reduce((prev, curr) => prev + curr + " ", 0);
+            this.dice = value.dice.map(x => new DieObj(x));
+        }
+        if (_.has(value, "usable_in_fight")) {
+            this.usable_in_fight = value.usable_in_fight;
+        } else {
+            this.usable_in_fight = true;
+        }
+
+        this.usedBy = 0;
+    }
+
+    toString = () => {
+        return this.name;
+    }
 }

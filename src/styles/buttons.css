@@ -27,3 +27,32 @@
 .btn-default:hover {
     color:white;
 }
+
+.btn-add-item {
+    background: none;
+    background-image: url("../img/add.png");
+    background-size: 66% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    text-align: right;
+}
+
+.popup-item-button {
+    background: none;
+    background-size: 33% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    text-align: right;
+}
+
+.btn-item-dice {
+    background-image: url("../img/item_dice.png");
+}
+
+.btn-item-consumable {
+    background-image: url("../img/item_cons.png");
+}
+
+.btn-item-passive {
+    background-image: url("../img/item_pass.png");
+}

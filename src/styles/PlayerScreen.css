@@ -6,6 +6,7 @@ div[class*="-container"] {
     background-image: url("../img/bg_grids.png");
     background-size: 100% 100%;
     padding: 2.5vh 10vw 2.5vh 10vw;
+    overflow-y: scroll;
 }
 
 .dice-container {
@@ -14,4 +15,14 @@ div[class*="-container"] {
 
 .items-container {
     height: 18vh;
+}
+
+.item {
+    height: 6vh;
+}
+
+.add-items-container {
+    width: 50vw;
+    height: 50vh;
+    padding: 4vh 5vw 4vh 5vw !important;
 }

@@ -35,8 +35,18 @@
     width: 48%;
 }
 
+.flex-column-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .flex-row-spacing .flex-column-twos {
     width: 48%;
+}
+
+.flex-row-spacing > .flex-column-thirds {
+    width: 32%;
 }
 
 .flex-row-spacing .flex-row-twos {
@@ -60,7 +70,7 @@
 
 .flex-center-row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 }
 

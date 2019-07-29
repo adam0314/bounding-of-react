@@ -7,14 +7,18 @@ import StartScreen from './StartScreen';
 import PlayerScreen from './PlayerScreen';
 import {PlayerObj} from "../utils/classes";
 import utils from "../utils/utils";
+import consts from '../utils/consts';
+//import { ItemObj } from "../utils/classes";
+import { connect } from "react-redux";
 
-const Game = () => {    
-    const [currentTab, setCurrentTab] = React.useState(utils.tabs.startScreen);
+const Game = props => {    
+    const [currentTab, setCurrentTab] = React.useState(consts.tabs.startScreen);
     const [currentPlayerId, setCurrentPlayerId] = React.useState(1);
+    //const [items, setItems] = React.useState(consts.itemsList.map(x => new ItemObj(x)));
 
     const startGame = playerId => {
         setCurrentPlayerId(playerId);
-        setCurrentTab(utils.tabs.playerScreen);
+        setCurrentTab(consts.tabs.playerScreen);
     }
 
     const changePlayer = () => {
@@ -25,17 +29,28 @@ const Game = () => {
         }
     }
 
+    //const setItemAsUsed = (itemId, playerId) => {
+    //    //debugger;
+    //    let item = items.filter(it => it.id === itemId)[0];
+    //    setItems([...items.filter(it => it !== item), Object.assign({}, item, {usedBy: playerId})]);
+    //}
+
+    const getItemsForPlayer = (playerId) => {
+        return props.items.filter(it => it.usedBy === playerId);
+    }
+
     const getTabComponent = () => {
         switch (currentTab) {
-            case utils.tabs.startScreen:
+            case consts.tabs.startScreen:
                 return <StartScreen onPlayerClick={startGame}/>;
-            case utils.tabs.playerScreen:
+            case consts.tabs.playerScreen:
                 return (
                     <>
                         {utils.range(1, 2).map(id => (
                             <PlayerScreen
                                 key={id}
                                 player={new PlayerObj(id)}
+                                items={getItemsForPlayer(id)}
                                 active={currentPlayerId === id}
                                 onEndTurnClick={changePlayer}
                             />
@@ -54,4 +69,8 @@ const Game = () => {
     );
 }
 
-export default Game;
+const mapStateToProps = state => {
+    return {items: state}
+}
+
+export default connect(mapStateToProps)(Game);
