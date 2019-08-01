@@ -4,6 +4,7 @@ import "../styles/PlayerScreen.css";
 import consts from "../utils/consts";
 import { DieObj } from "../utils/classes";
 import FightBaseTab from "./FightBaseTab";
+import utils from "../utils/utils";
 
 const PlayerScreen = props => {
     const [currentTab, setCurrentTab] = React.useState(consts.tabs.playerData);
@@ -14,8 +15,11 @@ const PlayerScreen = props => {
     const [enemy, setEnemy] = React.useState({});
 
     const setEnemyByCopy = enemy => {
-        //todo: Include Enemy Power here
-        setEnemy(Object.assign({}, enemy));
+        setEnemy(Object.assign({}, enemy, {dice: Array.prototype.concat(enemy.dice, utils.createDiceForEnemyPowerAndSign(enemyPower, enemy.sign))}));
+    }
+
+    const clearEnemy = () => {
+        setEnemy({});
     }
 
     const addDie = value => {
@@ -42,8 +46,12 @@ const PlayerScreen = props => {
                     />
                     : <FightBaseTab
                         onEnemyChosen={setEnemyByCopy}
+                        clearEnemy={clearEnemy}
                         enemy={enemy}
-                        onBackClick={() => setCurrentTab(consts.tabs.playerData)}
+                        onBackClick={() => {
+                            setCurrentTab(consts.tabs.playerData);
+                            clearEnemy();
+                        }}
                         />
                 : null}
         </>

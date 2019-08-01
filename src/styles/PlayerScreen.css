@@ -84,3 +84,7 @@ div[class*="-container"] {
     z-index: 2;
     opacity: 0.9;
 }
+
+.height-40pc {
+    height: 40vh;
+}

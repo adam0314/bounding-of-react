@@ -21,7 +21,12 @@ const consts = {
         normal: "normal",
         boss: "boss",
         player: "player"
-    }
+    },
+
+    // Die chances and stuff
+    diePerEnemyPower: 6, //has to be even
+    dieMaxToAdd: 30, //this too
+    dieMatchingTypeChance: 0.8
 }
 
 export default consts;

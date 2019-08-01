@@ -1,13 +1,13 @@
 import React from 'react';
-import '../styles/App.css';
-import '../styles/buttons.css';
-import "../styles/flex.css";
+import '../../styles/App.css';
+import '../../styles/buttons.css';
+import "../../styles/flex.css";
 
-import StartScreen from './StartScreen';
-import PlayerScreen from './PlayerScreen';
-import {PlayerObj} from "../utils/classes";
-import utils from "../utils/utils";
-import consts from '../utils/consts';
+import StartScreen from '../StartScreen';
+import PlayerScreen from '../PlayerScreen';
+import {PlayerObj} from "../../utils/classes";
+import utils from "../../utils/utils";
+import consts from '../../utils/consts';
 //import { ItemObj } from "../utils/classes";
 import { connect } from "react-redux";
 
