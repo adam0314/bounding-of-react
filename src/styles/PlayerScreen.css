@@ -6,6 +6,11 @@ div[class*="-container"] {
     background-image: url("../img/bg_grids.png");
     background-size: 100% 100%;
     padding: 2.5vh 10vw 2.5vh 10vw;
+}
+
+.scroll-y {
+    width: 100%;
+    height: 100%;
     overflow-y: scroll;
 }
 
@@ -18,11 +23,64 @@ div[class*="-container"] {
 }
 
 .item {
-    height: 6vh;
+    height: 33%;
+    background-size: 33% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    text-align: center;
+}
+
+.popup-item {
+    height: 15%;
+}
+
+.die {
+    height: 33%;
+    background-size: 33% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    text-align: center;
 }
 
 .add-items-container {
     width: 50vw;
     height: 50vh;
     padding: 4vh 5vw 4vh 5vw !important;
+}
+
+.item-buttons-ctnr {
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    margin-top: calc(18vh * 0.66);
+}
+
+.enemy-container {
+    height: 18vh;
+    width: 66vw;
+    display: flex;
+}
+
+.enemy-dropdown-cntr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+}
+
+.enemy-container .enemy-name {
+    height: 20%;
+}
+
+.popup-enemy-dropdown {
+    position: absolute;
+    top: 25%;
+    right: 10vw;
+    height: 30vh;
+    width: 40vw;
+    background-image: url("../img/bg_grids.png");
+    background-size: 100% 100%;
+    padding: 3vh 8vw;
+    z-index: 2;
+    opacity: 0.9;
 }

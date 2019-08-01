@@ -1,6 +1,5 @@
 import { createStore } from "redux";
-import consts from "../utils/consts";
-import { ItemObj } from "../utils/classes";
+import { items } from "../utils/lists";
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -15,6 +14,6 @@ const reducer = (state, action) => {
     }
 }
 
-const store = createStore(reducer, consts.itemsList.map(x => new ItemObj(x)))
+const store = createStore(reducer, items)
 
 export default store;

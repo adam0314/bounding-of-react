@@ -1,7 +1,9 @@
 import React from "react";
 import utils from "../utils/utils";
 import "../styles/sprites.css";
-import AddItemPopup from "./AddItemPopup";
+import AddItemPopup from "./popups/AddItemPopup";
+import PlayerItemsGrid from "./grids/PlayerItemsGrid";
+import DiceGrid from "./grids/DiceGrid";
 
 const PlayerDataTab = props => {
 
@@ -12,11 +14,11 @@ const PlayerDataTab = props => {
 
     return (
         <>
-            <AddItemPopup
-                display={displayAddItemPopup ? "flex" : "none"}
-                playerId={props.playerObj.id}
-                closePopup={() => setDisplayAddItemPopup(false)}
-            />
+            {displayAddItemPopup ?
+                <AddItemPopup
+                    playerId={props.playerObj.id}
+                    closePopup={() => setDisplayAddItemPopup(false)}
+            /> : null}
             <section className="flex-fill">
                 <h1 className="center-text">
                     Gracz {playerId} - {props.playerObj.name}
@@ -53,43 +55,23 @@ const PlayerDataTab = props => {
                 </div>
                 <div className="flex-center-col">
                     <label className="center-text">Kości</label>
-                    <div className="dice-container">
-                        {props.dice.map((die, idx) => (
-                            <div key={idx}>
-                                {die.toString()}
-                            </div>
-                        ))}
-                    </div>
+                    <DiceGrid
+                        dice={props.dice}
+                    />
                 </div>
                 <div className="flex-center-col">
                     <label className="center-text">Przedmioty</label>
-                    <div className="items-container flex-row-spacing">
-                        {props.items.map((item, idx) => (
-                            <div className="item flex-column-thirds" key={idx}>
-                                {item.toString()}
-                            </div>
-                        ))}
-                        <button
-                            className="item btn-add-item flex-column-thirds"
-                            onClick={() => setDisplayAddItemPopup(true)}>
-                            Dodaj
-                        </button>
-                    </div>
+                    <PlayerItemsGrid
+                        items={props.items}
+                        addItem={setDisplayAddItemPopup}
+                    />
                 </div>
-
-                <div className="flex-grow">
-                    FILLER
-                </div>
-                <div>
+                <div className="flex-grow" />
+                <div className="flex-row-end">
                     <button
                         className="btn-default"
-                        onClick={() => props.onAddItemClick(1, playerId)}>
-                        XD
-                        </button>
-                    <button
-                        className="btn-default"
-                        onClick={() => props.onAddDieClick("+6")}>
-                        I'm Roxxxy Andrews and I'm here
+                        onClick={props.onFightTabClick}>
+                        Walcz!
                         </button>
                     <button
                         className="btn-default"

@@ -15,6 +15,10 @@
     background-repeat: no-repeat;
 }
 
+.btn-no-bg {
+    background: none;
+}
+
 .btn-default {
     background: none;
     background-image: url("../img/btn_default.png");
@@ -31,15 +35,26 @@
 .btn-add-item {
     background: none;
     background-image: url("../img/add.png");
-    background-size: 66% 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     border: none;
-    text-align: right;
+    height: 8vh;
+    width: 8vh;
+}
+
+.btn-remove-item {
+    background: none;
+    background-image: url("../img/remove.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    height: 8vh;
+    width: 8vh;
 }
 
 .popup-item-button {
     background: none;
-    background-size: 33% 100%;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     border: none;
     text-align: right;
@@ -55,4 +70,64 @@
 
 .btn-item-passive {
     background-image: url("../img/item_pass.png");
+}
+
+.btn-close {
+    height: 16vw;
+    width: 16vw;
+    background: none;
+    background-size: 100% 100%;
+    background-image: url("../img/close.png");
+    border: none;
+}
+
+.btn-close-popup {
+    position: absolute;
+    margin-left: 28vw;
+}
+
+.btn-dropdown {
+    background: none;
+    background-image: url("../img/dropdown.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    height: 8vh;
+    width: 8vh;
+}
+
+.btn-dropdown-rotate-180 {
+    transform: rotate(180deg);
+}
+
+.btn-select-enemy {
+    min-height: 33%;
+    margin-bottom: 2%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.btn-fight {
+    height: 35vw;
+    width: 35vw;
+    background: none;
+    background-image: url("../img/fight.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+.btn-back {
+    height: 35vw;
+    width: 35vw;
+    background: none;
+    background-image: url("../img/back.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
 }

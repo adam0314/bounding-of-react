@@ -1,6 +1,6 @@
-div[class^="sprite"] {
+div[class*="sprite"] {
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: auto 100%;
 }
 
 .sprite-player1 {
@@ -31,4 +31,130 @@ div[class^="sprite"] {
     background-image: url("../img/EnemyToken.png");
     height: 65px;
     width: 80px;
+}
+
+/* Item types */
+
+.sprite-dice {
+    background-image: url("../img/item_dice.png");
+}
+
+.sprite-consumable {
+    background-image: url("../img/item_cons.png");
+}
+
+.sprite-passive {
+    background-image: url("../img/item_pass.png");
+}
+
+/* Dice */
+
+.sprite-die-pos {
+    background-image: url("../img/dice_pos.png");
+}
+
+.sprite-die-neg {
+    background-image: url("../img/dice_neg.png");
+}
+
+.sprite-die-neu {
+    background-image: url("../img/dice_neu.png");
+}
+
+/* Hearts */
+
+.sprite-heart-red {
+    background-image: url("../img/heart.png");
+}
+
+.sprite-heart-blue {
+    background-image: url("../img/heart_blue.png");
+}
+
+.sprite-heart-orange {
+    background-image: url("../img/heart_orange.png");
+}
+
+.sprite-heart-empty {
+    background-image: url("../img/heart_empty.png");
+}
+
+/* Allowed dice */
+
+div[class*="sprite-allowed-dice"] {
+    background-position: center;
+}
+
+.sprite-allowed-dice-01 {
+    background-image: url("../img/allowed_dice/blue.png");
+}
+
+.sprite-allowed-dice-02 {
+    background-image: url("../img/allowed_dice/grey.png");
+}
+
+.sprite-allowed-dice-03 {
+    background-image: url("../img/allowed_dice/blue_grey.png");
+}
+
+.sprite-allowed-dice-04 {
+    background-image: url("../img/allowed_dice/orange.png");
+}
+
+.sprite-allowed-dice-05 {
+    background-image: url("../img/allowed_dice/blue_orange.png");
+}
+
+.sprite-allowed-dice-06 {
+    background-image: url("../img/allowed_dice/grey_orange.png");
+}
+
+.sprite-allowed-dice-07 {
+    background-image: url("../img/allowed_dice/all.png");
+}
+
+/* Enemies */
+
+div[class*="sprite-enemy"] {
+    background-position: center;
+}
+
+.sprite-enemy-token {
+    background-image: url("../img/EnemyToken.png");
+}
+
+.sprite-enemy-000 {
+    background-image: url("../img/enemies/000.png");
+}
+
+.sprite-enemy-001 {
+    background-image: url("../img/enemies/001.png");
+}
+
+.sprite-enemy-002 {
+    background-image: url("../img/enemies/002.png");
+}
+
+.sprite-enemy-003 {
+    background-image: url("../img/enemies/003.png");
+}
+
+.sprite-enemy-004 {
+    background-image: url("../img/enemies/004.png");
+}
+
+.sprite-enemy-005 {
+    background-image: url("../img/enemies/005.png");
+}
+
+.sprite-enemy-006 {
+    background-image: url("../img/enemies/006.png");
+}
+
+.sprite-enemy-007 {
+    background-image: url("../img/enemies/007.png");
+}
+
+.sprite-enemy-101 {
+    background-image: url("../img/enemies/101.png");
 }

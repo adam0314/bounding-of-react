@@ -12,13 +12,13 @@ import consts from '../utils/consts';
 import { connect } from "react-redux";
 
 const Game = props => {    
-    const [currentTab, setCurrentTab] = React.useState(consts.tabs.startScreen);
+    const [gameState, setGameState] = React.useState(consts.gameStates.prepared);
     const [currentPlayerId, setCurrentPlayerId] = React.useState(1);
     //const [items, setItems] = React.useState(consts.itemsList.map(x => new ItemObj(x)));
 
     const startGame = playerId => {
         setCurrentPlayerId(playerId);
-        setCurrentTab(consts.tabs.playerScreen);
+        setGameState(consts.gameStates.active);
     }
 
     const changePlayer = () => {
@@ -40,10 +40,10 @@ const Game = props => {
     }
 
     const getTabComponent = () => {
-        switch (currentTab) {
-            case consts.tabs.startScreen:
+        switch (gameState) {
+            case consts.gameStates.prepared:
                 return <StartScreen onPlayerClick={startGame}/>;
-            case consts.tabs.playerScreen:
+            case consts.gameStates.active:
                 return (
                     <>
                         {utils.range(1, 2).map(id => (
