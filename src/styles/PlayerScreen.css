@@ -1,6 +1,22 @@
+/* Start of text */
+
 .center-text {
     text-align: center;
 }
+
+.text-orange {
+    color: orange;
+}
+
+.text-blue {
+    color: rgb(63, 136, 245);
+}
+
+.text-grey {
+    color: grey;
+}
+
+/* End of text */
 
 div[class*="-container"] {
     background-image: url("../img/bg_grids.png");
@@ -20,6 +36,22 @@ div[class*="-container"] {
 
 .items-container {
     height: 18vh;
+}
+
+.throws-container {
+    height: 12vh;
+    display: flex;
+}
+
+.throws-sum-container {
+    top: 8vh;
+    right: 2vw;
+
+    height: 5vh;
+    width: 12vw;
+    text-align: center;
+    position: relative;
+    padding: 1vh 2vw !important;
 }
 
 .item {
@@ -85,6 +117,29 @@ div[class*="-container"] {
     opacity: 0.9;
 }
 
+.popup-use-items {
+    /* todo */
+    position: absolute;
+    top: 45%;
+    right: 20vw;
+    height: 30vh;
+    width: 40vw;
+    background-image: url("../img/bg_grids.png");
+    background-size: 100% 100%;
+    padding: 3vh 8vw;
+    z-index: 2;
+    opacity: 0.9;
+}
+
 .height-40pc {
     height: 40vh;
+}
+
+.enemy-info-sprite {
+    height: 10vh;
+    width: 10vh;
+}
+
+.throw-result {
+    margin-right: 1em;
 }

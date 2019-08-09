@@ -131,3 +131,25 @@
     background-position: center;
     border: none;
 }
+
+.btn-square {
+    width: 15vh;
+    background: none;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+.btn-add-item-1 {
+    background-image: url("../img/addItem1.png");
+}
+
+.btn-add-item-2 {
+    background-image: url("../img/addItem2.png");
+}
+
+.btn-next {
+    background-image: url("../img/next.png");
+    background-size: auto 66%;
+}

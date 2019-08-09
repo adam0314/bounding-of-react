@@ -13,7 +13,7 @@ const EnemyGrid = props => {
     }); // [enemy-sprite, enemy-name (not a sprite actually), enemy-allowed-dice, enemy-sign (heart)]
 
     React.useEffect(() => {
-        console.log("effect memed, sprites set");
+        console.log("[EnemyGrid.js] effect loaded, sprites set");
         if (_.isEmpty(props.enemy)) {
             setSprites({
                 enemy: "sprite-enemy-token",
@@ -39,7 +39,7 @@ const EnemyGrid = props => {
             });
         }
         return () => {
-            console.log("clearing effect hook");
+            console.log("[EnemyGrid.js] clearing effect hook");
         }
     }, [props.enemy]);
 
@@ -55,7 +55,7 @@ const EnemyGrid = props => {
         <>
             <div className="enemy-container">
                 <div className="flex-grow flex-row">
-                    <div className="flex-grow-double flex-column">
+                    <div className="flex-grow-2x flex-column">
                         <div
                             className={"flex-grow " + sprites.enemy} />
                         <div className="enemy-name">

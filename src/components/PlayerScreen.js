@@ -45,6 +45,8 @@ const PlayerScreen = props => {
                         onAddDieClick={addDie}
                     />
                     : <FightBaseTab
+                        playerObj={props.player}
+                        playerDice={getAllDice}
                         onEnemyChosen={setEnemyByCopy}
                         clearEnemy={clearEnemy}
                         enemy={enemy}

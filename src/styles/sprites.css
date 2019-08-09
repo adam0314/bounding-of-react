@@ -5,14 +5,19 @@ div[class*="sprite"] {
 
 .sprite-player1 {
     background-image: url("../img/player1.png");
+}
+
+.sprite-player-fixed-size {
     height: 150px;
     width: 150px;
 }
 
+.sprite-center {
+    background-position: center;
+}
+
 .sprite-player2 {
     background-image: url("../img/player2.png");
-    height: 150px;
-    width: 150px;
 }
 
 .sprite-heart {

@@ -4,6 +4,12 @@
     flex-direction: column;
 }
 
+.flex-fill-100pc {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .flex-fill-center {
     min-height: 100vh;
     display: flex;
@@ -117,8 +123,12 @@
     flex: 1;
 }
 
-.flex-grow-double {
+.flex-grow-2x {
     flex: 2;
+}
+
+.flex-grow-3x {
+    flex: 3;
 }
 
 .flex-end {

@@ -55,7 +55,11 @@ export class DieObj {
 
     toString = () => {
         return this.signChar + this.value;
-    }	
+    }
+
+    throwDie = () => {
+        return _.random(1, this.value)*(this.sign === consts.sign.negative ? -1 : 1); 
+    }
 }
 
 export class ItemObj {
@@ -109,5 +113,13 @@ export class EnemyObj {
             idx += 4;
         }
         return "0" + idx;
+    }
+}
+
+export class ThrowObj {
+    constructor(value) {
+        this.dieVal = value.dieVal;
+        this.dieThrow = value.dieThrow;
+        this.sign = value.sign;
     }
 }

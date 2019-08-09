@@ -1,5 +1,5 @@
 import consts from "./consts";
-import { DieObj } from "./classes";
+import { DieObj, ThrowObj } from "./classes";
 import _ from "lodash";
 
 const utils = {
@@ -62,6 +62,31 @@ const utils = {
             dice = [...dice, new DieObj(utils.random.rollForDieSign(sign) + dieToAdd)]
         }
         return dice;
+    },
+    formatDieThrowToString: (dieThrow) => {
+        return (dieThrow.sign === consts.sign.positive
+            ? "+" + dieThrow.dieThrow
+            : "" + dieThrow.dieThrow);
+    },
+    getColorCssForSign: sign => {
+        switch (sign) {
+            case consts.sign.negative:
+                return "text-blue";
+            case consts.sign.positive:
+                return "text-orange";
+            default:
+                return "text-grey";
+        }
+    },
+    throwDice: dice => {
+        return dice.map(die => (new ThrowObj({
+            dieVal: die.value,
+            dieThrow: die.throwDie(),
+            sign: die.sign
+        })))
+    },
+    getPassivesItemsId: items => {
+        return items.filter(item => item.type === consts.itemTypes.passive).map(item => item.id);
     },
 
     random: {

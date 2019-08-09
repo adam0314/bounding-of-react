@@ -25,7 +25,7 @@ const PlayerDataTab = props => {
                 </h1>
                 <div className="flex-row-spacing">
                     <div className="flex-column-twos-center">
-                        <div className={playerClassForId} />
+                        <div className={playerClassForId + " sprite-player-fixed-size"} />
                     </div>
                     <div className="flex-row-twos">
                         {utils.range(1, props.hp).map(no => (
